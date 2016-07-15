@@ -27,5 +27,23 @@ app.get('/', function (req, res) {
    res.sendFile(__dirname + '/public/index.html');
 });
 
+
+
+app.post('/detectbrowser',function(req,res){
+
+var userdata = { data:req.useragent};
+var query = db.query('INSERT INTO `useragent` SET?', {data:JSON.stringify(userdata), id: req.body.memberID}, function(err,result){
+  if (err) throw err;
+  else 
+     res.sendFile(__dirname + '/public/consentform.html');
+});
+console.log(query.sql);
+})
+
+
+
+
+
+
 var port = Number(process.env.PORT || 3000);
 app.listen(port);

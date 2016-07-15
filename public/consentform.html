@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href='reset.css' rel="stylesheet"/>
+<link href='style.css' rel="stylesheet"/>
+
+	<title>Consent Form</title>
+</head>
+<body>
+<div class="pageWrapper">
+<h2> Consent Form </h2>
+<p>
+
+This study concerns consumer attitudes related to lodging experiences. We support the practice of protection for individuals participating in research. Your participation is completely voluntary and you may withdraw from the study at any time.</p>
+<p>
+Be assured that your name will not be associated in any way with the research findings.<b> All of your actions will be confidential</b>. We are interested in the overall attitudes of the general U.S. population
+Please be aware that:</p>
+<ul>
+	<li>Your participation is completely voluntary</li>
+	<li>Your participation involves no risk.</li>
+</ul>
+
+<p>By continuing this survey, you are giving consent to participate in this study.</p>
+ <p>
+</p>
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+<script>
+
+
+function agree(){
+			
+			location=["./review/reviewpage.html"];
+	
+}
+</script>
+
+
+
+
+<div id="agree" onclick="agree()">I agree </div>
+
+
+
+</div>
+
+</body>
+</html>
