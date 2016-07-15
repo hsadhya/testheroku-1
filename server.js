@@ -4,6 +4,20 @@ var app = express();
 
 app.use(express.static('public'));
 
+var bodyParser = require('body-parser');
+var useragent = require('express-useragent');
+var json ={};
+app.use(useragent.express());
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));// call methods separate
+
+app.use(express.static('public'));
+app.use(bodyParser.json());
+
+
+
 var connection = mysql.createConnection({
 //connection parameters
 host:'nj5rh9gto1v5n05t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
