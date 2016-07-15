@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 app.post('/detectbrowser',function(req,res){
 
 var userdata = { data:req.useragent};
-var query = db.query('INSERT INTO `useragent` SET?', {data:JSON.stringify(userdata), id: req.body.memberID}, function(err,result){
+var query = connection.query('INSERT INTO `useragent` SET?', {data:JSON.stringify(userdata), id: req.body.memberID}, function(err,result){
   if (err) throw err;
   else 
      res.sendFile(__dirname + '/public/consentform.html');
