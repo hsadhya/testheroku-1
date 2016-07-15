@@ -7,8 +7,8 @@ app.use(express.static('public'));
 var bodyParser = require('body-parser');
 var useragent = require('express-useragent');
 var json ={};
-app.use(useragent.express());
 
+app.use(useragent.express());
 app.use(bodyParser.urlencoded({
   extended: true
 }));// call methods separate
