@@ -1,0 +1,44 @@
+.pageWrapper {
+	width: 960px;
+	background-color: white;
+	padding: 0px;
+	/* margin is 0 top-bottom and auto in the sides*/
+	margin: 0px auto;}
+body {
+	font-family: arial;
+	line-height: 200%;
+}
+
+h2 {
+	padding-top: 60px;
+	font-size: 22px;
+	padding-bottom: 40px;
+}
+p {
+	padding: 10px;
+}
+
+b {
+	font-weight: 700;
+}
+
+ul {
+	padding:10px; 
+}
+
+#agree {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 50px;
+	background-color: grey;
+	width: 100px;
+	position: relative;
+	left: 45%;
+	text-align: center;
+	padding: 20px;
+}
+
+#genderForm {
+	position: relative;
+	left: 45%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href='reset.css' rel="stylesheet"/>
+<link href='style.css' rel="stylesheet"/>
+
+
+</head>
+<body>
+<div class="pageWrapper">
+<h2> Consent Form </h2>
+<p>
+<input type="hidden" value="" name="userAgent" id="userAgent">
+Welcome to the study conducted by Digital Data Streams Lab @ LSU.</br> We are a paying fair amount for a simple task. For identical experimental settings we need you to comply with following standards:</p>
+
+
+</p>
+<ul>
+	<li>You should complete this experiment on an IPAD only </li>
+	<li>The browser should be Google Chrome only</li>
+	<p> Please click continue if you agree to above standards:</p>
+</ul>
+
+<form action="/detectbrowser", method= "POST">
+<input type="hidden" name="memberID" id="memberID" value="">
+<input type = "submit" value="Continue" >
+
+</form>
+
+<script type="text/javascript">
+    function randomNumber(len) {
+    	var randomNumber ;
+    	var n = '';
+
+	    for(var count = 0; count<len; count++){
+
+	    	randomNumber = Math.floor(Math.random() * 10);
+	    	n += randomNumber.toString();
+	    }
+	    return n;
+}
+
+window.onload = function(){
+localStorage.memberID = document.getElementById("memberID").value = randomNumber(9);
+
+};
+
+
+</script>
+</div>
+
+</body>
+</html>

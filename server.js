@@ -21,6 +21,9 @@ connection.connect(function(err){
 	}
 });
 
+app.get('/', function (req, res) {
+   res.sendFile(__dirname +'public/index.html');
+});
 
 var port = Number(process.env.PORT || 3000);
 app.listen(port);
