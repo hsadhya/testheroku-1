@@ -2,6 +2,8 @@ var express = require("express");
 var mysql = require('mysql');
 var app = express();
 
+app.use(express.static('public'));
+
 var connection = mysql.createConnection({
 //connection parameters
 host:'nj5rh9gto1v5n05t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
@@ -22,7 +24,7 @@ connection.connect(function(err){
 });
 
 app.get('/', function (req, res) {
-   res.sendFile(__dirname +'/public/index.html');
+   res.sendFile(__dirname + '/public/index.html');
 });
 
 var port = Number(process.env.PORT || 3000);
