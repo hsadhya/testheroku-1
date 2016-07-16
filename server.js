@@ -71,7 +71,7 @@ var reviewdata  = {id: req.body.memberID,
             value: req.body.valuess
             };
 
-var query = db.query('INSERT INTO relevance SET ?', reviewdata, function(err, result) {
+var query = connection.query('INSERT INTO relevance SET ?', reviewdata, function(err, result) {
   if(err) throw err;
     else
      res.sendFile(__dirname + ["/public/red/red.html","/public/grey/grey.html"][Math.floor(Math.random()*2)]);
