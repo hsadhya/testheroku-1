@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/mturk/testuser/public/red/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>WriteReview</title>
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="./red_files/style.css" rel="stylesheet">
+<script src="./red_files/jquery.min.js"></script>
+</head>
+
+
+<body class="en_US ltr hassvg noscript">
+
+<div id="MAIN" class="MobileUserReview ">
+<div id="BODYCON" class="">
+<div id="writeReview">
+<h4><div class="drawerLink">Let us know your opinion below:-</div></h4>
+
+<div class="prompt ">Would you stay at this hotel?</div></br></br>
+
+
+
+<script language="javascript" type="text/javascript">
+        function ChangeColor(inputObj) {
+            if (inputObj.value == "Yes") {
+                document.getElementById(inputObj.id).style.backgroundColor = "gray";
+                document.getElementById("Button2").style.backgroundColor = "";
+                
+            }
+            else {
+                document.getElementById(inputObj.id).style.backgroundColor = "red";
+                document.getElementById("Button1").style.backgroundColor = "";
+            
+            }
+        }
+
+    </script>
+
+
+
+<div id="writeAReview" class="submitReview">
+ <div class="content">
+  <div class="textQuestion">
+<form id="answer" name="myForm" method="POST" action="/treatment">
+    <input type="hidden" name="memberID" id="memberID" value="">
+     <input type="hidden" name="score" id="score" value="">
+    <input type="hidden" name="treatment" value="treatmentred"></input>
+    <input type="button" id="Button1" name= "mybutton"  value="Yes"  onclick="ChangeColor(this);getValYes();"/>
+    <input type="button" id="Button2" name="mybutton" value="No"  onclick="ChangeColor(this);getValNo();"  /></br></br>
+
+
+<script>
+ document.getElementById("memberID").value = localStorage.memberID;
+    e.preventDefault();
+function getValYes(){
+document.getElementById("score").value = 'Yes'
+}
+
+function getValNo(){
+document.getElementById("score").value = 'No'
+}
+
+
+</script>
+
+    <input type="submit" id="Button3" value="Submit!" />
+</form>
+
+
+</div></div></div></div></div></div></div></div></body></html>

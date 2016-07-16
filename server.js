@@ -58,6 +58,29 @@ console.log(query.sql);
 
 
 
+//Posting the data from public/review/reviewpage
+app.post('/insertdata', function(req,res){
+
+var reviewdata  = {id: req.body.memberID,
+            gender: req.body.optradio,
+            overall: req.body.overall,
+            cleanliness: req.body.cleanliness,
+            sleepquality: req.body.sleepQuality,
+            rooms: req.body.rooms,
+            service: req.body.service,
+            value: req.body.valuess
+            };
+
+var query = db.query('INSERT INTO relevance SET ?', reviewdata, function(err, result) {
+  if(err) throw err;
+    else
+     res.sendFile(__dirname + ["/public/red/red.html","/public/grey/grey.html"][Math.floor(Math.random()*2)]);
+});
+console.log(query.sql);  
+
+})
+
+
 
 
 

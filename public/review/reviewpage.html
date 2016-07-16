@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='reset.css' rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='style.css' rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<title>Consent Form</title>
+	
+</head>
+
+
+
+<div class="pageWrapper">
+<div>
+<p><u><b>INSTRUCTIONS</b></u>: Read the review below and try to identify yourself with the reviewer. Later, you will evaluate the experience according to six criteria: overall, cleanliness, sleep quality, rooms, service and value. <br> In the right column, you have six textfields: In each of those, <a>copy and paste </a> the sentence(s) that according to you describe each criterion. Afterwards, click "submit" to proceed to the evaluation of the experience</p>
+<div class="review">
+<h2> Awful sleep quality!</h2>
+<p>
+Last year, we chose the cheapest hotel we could find (around 40$) and it left something to be desired. This year, I considered higher star hotels in the $120 range, and decided that the Continental Inn would be a good compromise. I was disappointed, and all the three people in my group agreed that the cheaper hotel from last year was even better! </p>
+<p>First, the staff was fine - friendly and helpful. However, this was simply not enough to make this place "worth it"! As for the room: When you open the door, it actually hits one of the beds and can't fully open because of the tight space. That bed also is within one foot of the air conditioner, making it difficult to sleep in because the air is SO CLOSE to your face. (I slept on the far side of that bed, but the closer side wasn't acceptable). </p><p>The room was clean enough, one hair in bathroom, but no biggie. They gave us plenty of towels and pillows. The beds were well made. However, at first, I didn't even think they had mattress covers, because I could feel the seams/grooves in the mattress. But after I got in bed, I realized they had the cheapest possible ill-fitting mattress covers, and all three of us complained about them sliding around and bunching up under the sheets. Also, the hotel rooms are outside entrances only, meaning every single car that drives into the lot makes noise and keeps you from sleeping. The walls are so thin that fellow guests rolling their luggage woke me up. I generally sleep quite well, no matter where, but between the bunched up bed, air conditioning, and noise, I couldn't sleep much at all. :(<p> Lastly, another reviewer recommended the breakfast, and the hotel website mentioned the hot breakfast including waffles and eggs. This was one of my deal-makers. However, the breakfast consisted of two cereals, a few packaged baked goods, a waffle maker, some hardboiled eggs and some old bananas. They had terrible apple juice and Sunny D orange juice. They needed to refill the butter and silverware (had to eat my waffle with a spoon rather than a fork). Now, don't get me wrong -- I expect this breakfast at your typical cheaper hotel, but I had higher expectations here. 
+All in all, this hotel was not worth the money. </p><p>I would have been satisfied with it had it been the typical $40-50 cheapy hotel -- for which I have lower expectations. However, for that extra 70$, I expected something better. I would not stay again, even if the price was right. I don't often do reviews, and again, I have no complaints about the staff... but the hotel itself was outdated, too small, and needed small upgrades to make it even acceptable. I arrived with reasonable expectations, but this just is not the place for me.</p>
+</div>
+<div id="keyword">
+<h2> </h2>
+<p>
+<form method='POST' id='myForm' action="/insertdata">
+	
+	Select gender: <br>
+
+<div class="form-group" id="gender">
+<label class="radio-inline"><input type="radio" name="optradio" value="m">Male</label>
+<label class="radio-inline"><input type="radio" name="optradio" value="f">Female</label>
+</div>
+
+
+<fieldset >
+<input type="hidden" value="" name='memberID' id='memberID'>
+
+<p><b>Copy/paste</b> in the textfields below the sentence(s) that you find relevant to evaluate each of criterion:</p>
+
+<p>Overall</p>  
+<textarea rows='8' cols='50' name="overall" id='overall' maxlength="500"></textarea>
+<p>Cleanliness</p>	
+<textarea rows='8' cols='50' name="cleanliness" id='cleanliness' maxlength="500"></textarea>
+<p>Sleep Quality</p>	
+<textarea rows='8' cols='50' name="sleepQuality" id='sleepQuality' maxlength="500"></textarea>
+<p>Rooms</p>	
+<textarea rows='8' cols='50' name="rooms" id='rooms' maxlength="500"></textarea>
+<p>Service</p>	
+<textarea rows='8' cols='50' name="service" id='service' maxlength="500"></textarea>
+<p>Value</p>	
+<textarea rows='8' cols='50' name="valuess" id='valuess' maxlength="500"></textarea>
+
+<p>
+<input type="submit" id = "submit" value="Submit" onClick = "validate(event,this.form);">
+</p>
+</fieldset>
+</form>
+
+
+<script>
+ document.getElementById("memberID").value = localStorage.memberID;
+
+function validate(e,form){
+ var gender = form.querySelectorAll('input[name= "optradio"]:checked');
+ if(!gender.length){
+ 	alert('Please select your gender');
+ 	e.preventDefault();
+ }
+
+}
+
+</script>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
