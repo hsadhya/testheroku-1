@@ -17,7 +17,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 
-
+//////////////////////////////////////////
 var connection = mysql.createConnection({
 //connection parameters
 host:'nj5rh9gto1v5n05t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
@@ -37,10 +37,10 @@ connection.connect(function(err){
 	}
 });
 
+///////////////////////////////////////////
 app.get('/', function (req, res) {
    res.sendFile(__dirname + '/public/index.html');
 });
-
 
 
 app.post('/detectbrowser',function(req,res){
@@ -53,6 +53,14 @@ var query = connection.query('INSERT INTO `useragent` SET?', {data:JSON.stringif
 });
 console.log(query.sql);
 })
+
+
+
+
+
+
+
+
 
 
 
