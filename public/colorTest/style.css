@@ -1,0 +1,45 @@
+.pageWrapper {
+	width: 960px;
+	background-color: white;
+	padding: 0px;
+	/* margin is 0 top-bottom and auto in the sides*/
+	margin: 0px auto;}
+
+body {
+	font-size: 18px;
+}
+
+p {
+	font-family: Arial;
+	
+}
+.pageWrapper {
+	padding: 30px;
+}
+
+#picTest {
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+
+}
+
+
+
+#container{
+padding: 20px;
+}
+
+#confirm{
+	background-color: ##BDBDBD; 
+    border-radius: 8px;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    width: 185px;
+}
+

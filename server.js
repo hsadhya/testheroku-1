@@ -82,13 +82,53 @@ console.log(query.sql);
 
 
 
+//Posting the data from treatments page
+app.post('/treatment', function(req,res,next){
+
+var treatmentdata = {
+
+  memberid: req.body.memberID,
+  treatment: req.body.treatment,
+  answer: req.body.score
+};
 
 
+var query = connection.query('INSERT INTO treatment SET ?', treatmentdata, function(err, result) {
+  if(err) throw err;
+    else
+    res.sendFile(__dirname + '/public/colorTest/index.html');  
+});
+console.log(query.sql); 
+
+})
 
 
+//Posting the data from colortest  page
 
+app.post('/colorblind', function(req,res){
 
+var colordata  = {memberid: req.body.memberID,
+            response1: req.body.colorboxanswer1,
+            response2: req.body.colorboxanswer2,
+            response3: req.body.colorboxanswer3,
+            response4: req.body.colorboxanswer4,
+            response5: req.body.colorboxanswer5,
+            response6: req.body.colorboxanswer6,
+            response7: req.body.colorboxanswer7,
+            response8: req.body.colorboxanswer8,
+            response9: req.body.colorboxanswer9
+            };
 
+var query = connection.query('INSERT INTO colorblind SET ?', colordata, function(err, result) {
+   if(err) throw err;
+  res.send('<html><h3></br></br>Thank you for your participation in this experiment.</br> The experiment is now concluded.</h3></html>');  
+   //console.log('success!')
+   //res.redirect('/colorblind');
+});
+console.log(query.sql);  
 
+})
+
+//////////////////////////////////////////
 var port = Number(process.env.PORT || 3000);
 app.listen(port);
