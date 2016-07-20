@@ -20,10 +20,10 @@ app.use(bodyParser.json());
 //////////////////////////////////////////
 var connection = mysql.createConnection({
 //connection parameters
-host:'nj5rh9gto1v5n05t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+host:'nj5rh9gto1v5asasasn05t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
 user:'t8gmzgkonkg6jl3h',
-password:'f9uflntdn8jmsvlh',
-database:'x54xfwbyrabdve9u',
+password:'f9uflntdn8jmsasasasvlh',
+database:'x54xfwbyrabdvesasas9u',
 port:3306
 });
 
